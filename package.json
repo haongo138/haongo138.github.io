@@ -1,0 +1,16 @@
+{
+  "name": "demo_portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Webside",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch scss/ --output dist/css/ --recursive",
+    "start": "live-server /mnt/d/demo_portfolio/dist"
+  },
+  "keywords": [],
+  "author": "Hao Ngo",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
