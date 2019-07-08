@@ -1,5 +1,4 @@
-$primary-color: #2196F3;
-$font-stack: Helvetica, sans-serif;
+@import 'config';
 
 * {
   margin: 0;
@@ -8,8 +7,69 @@ $font-stack: Helvetica, sans-serif;
 }
 
 body {
+  @include background;
   font: 100% $font-stack;
-  width: 100%;
+  background-color: $dark-color;
+  color: #fff;
   height: 100%;
-  background-color: $primary-color;
+  margin: 0;
+  line-height: 1.5;
+}
+
+// headings 
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($dark-color, 2), 0.5);
+  }
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .social-icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $primary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }
