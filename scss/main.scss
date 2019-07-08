@@ -31,7 +31,8 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($dark-color, 2), 0.5);
+    background: rgba(lighten($dark-color, 2), 0.6);
+    border-radius: 10px;
   }
 }
 
