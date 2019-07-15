@@ -9,11 +9,16 @@
   cursor: pointer;
   @include easeOut;
 
+  &:hover {
+    transform: scale(1.1);
+    @include easeOut;
+  }
+
   .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($dark-color);
     @include easeOut;
   }
 
@@ -115,7 +120,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($dark-color);
     text-decoration: none;
     @include easeOut;
 

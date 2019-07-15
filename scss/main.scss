@@ -1,6 +1,6 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ body {
   @include background;
   font: 100% $font-stack;
   background-color: $dark-color;
-  color: #fff;
+  color: set-text-color($dark-color);
   height: 100%;
   margin: 0;
   line-height: 1.5;
@@ -77,3 +77,105 @@ main {
     }
   }
 }
+
+// Author Page
+.author-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+  'bio-image bio skill'
+  'project-1 project-2 project-3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {   
+    margin: auto;
+
+    .img {
+      border-radius: 999px;
+      border: 2px solid $secondary-color;
+      
+      &:hover {
+        transform: rotate(-360deg);
+        @include easeOut;
+      }
+    }
+
+    .author-name {
+      text-align: center;
+      font-weight: bold;
+      font-style: italic;
+      color:#f1c40f;
+    }
+  }
+
+  .bio {
+    margin: auto;
+    padding: 1em;
+    background: #3c5161ad;
+    border-radius: 10px;
+    
+
+    h4 {
+      margin-bottom: 1em;
+    }
+
+    .bio-content {
+      list-style: none;
+
+      a {
+        font-style: italic;
+
+        &:hover {
+          color: $secondary-color;
+          @include easeOut;
+        }
+      }
+    }
+  }
+
+  .skill {
+    margin: auto;
+    padding: 1em;
+    background: #3c5161ad;
+    border-radius: 10px;
+
+    li {
+      list-style: none;
+
+      &:hover {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .project {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: bold;
+
+      &:hover {
+        color: $secondary-color;
+        font-style: italic;
+        @include easeOut;
+      }
+    }
+
+    .project-img {
+      border-radius: 10px;
+
+      &:hover {
+        transform: scale(1.05);
+        @include easeOut;
+      }
+    }
+  }
+
+}
+
+
+@import 'mobile';

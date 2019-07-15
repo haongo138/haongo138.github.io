@@ -42,6 +42,51 @@
     transform: translate3d(100%, 0, 0);
     
   }
+
+  // about page
+  profile h1 {
+    margin-bottom: 1em;
+  }
+  .author-info {
+    grid-template-areas: 
+      'bio-image'
+      'bio'
+      'skill'
+      'project-1'
+      'project-2'
+      'project-3';
+
+    grid-template-columns: 1fr;
+  
+    .bio {
+      margin: auto;
+      
+      h4 {
+        text-align: center;
+      }
+
+      .bio-content {
+        display: flex;
+        flex-direction: column;
+        
+        li {
+          text-align: center;
+        }
+      }
+    }
+
+    .skill {
+      margin: auto;
+
+      h4 {
+        text-align: center;
+      }
+
+      li {
+        text-align: center;
+      }
+    }
+  }
 }
 
 // Smartphones

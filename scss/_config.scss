@@ -1,6 +1,7 @@
 $primary-color: #2196F3;
 $dark-color: #34495e;
-$secondary-color: #16a085;
+$light-color: #fff;
+$secondary-color: #2ecc71;
 $font-stack: 'Segoe UI', Helvetica, sans-serif;
 $home-image: url(../images/banner5.jpg);
 $profile-image: url(../images/profile200x200.png);
@@ -29,6 +30,15 @@ $background-opacity: 0.9;
       background: rgba($dark-color, $background-opacity);
       z-index: -1;
     }
+  }
+}
+
+// Define set-text-color function
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 

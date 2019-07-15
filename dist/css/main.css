@@ -5,6 +5,9 @@
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
+  .menu-btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -56,14 +59,14 @@
       height: 200px;
       background: url(../images/profile200x200.png);
       border-radius: 999px;
-      border: 3px solid #16a085; }
+      border: 3px solid #2ecc71; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #16a085; }
+      color: #2ecc71; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -75,7 +78,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #16a085; }
+      color: #2ecc71; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -88,33 +91,6 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
-
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 2rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 60vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 40vh;
-    transform: translate3d(100%, 0, 0); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
 
 * {
   margin: 0;
@@ -170,7 +146,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #16a085; }
+  color: #2ecc71; }
 
 main {
   padding: 4rem;
@@ -186,3 +162,109 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.author-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bio-image bio skill' 'project-1 project-2 project-3';
+  grid-template-columns: repeat(3, 1fr); }
+  .author-info .bio-image {
+    margin: auto; }
+    .author-info .bio-image .img {
+      border-radius: 999px;
+      border: 2px solid #2ecc71; }
+      .author-info .bio-image .img:hover {
+        transform: rotate(-360deg);
+        transition: all 0.5s ease-out; }
+    .author-info .bio-image .author-name {
+      text-align: center;
+      font-weight: bold;
+      font-style: italic;
+      color: #f1c40f; }
+  .author-info .bio {
+    margin: auto;
+    padding: 1em;
+    background: #3c5161ad;
+    border-radius: 10px; }
+    .author-info .bio h4 {
+      margin-bottom: 1em; }
+    .author-info .bio .bio-content {
+      list-style: none; }
+      .author-info .bio .bio-content a {
+        font-style: italic; }
+        .author-info .bio .bio-content a:hover {
+          color: #2ecc71;
+          transition: all 0.5s ease-out; }
+  .author-info .skill {
+    margin: auto;
+    padding: 1em;
+    background: #3c5161ad;
+    border-radius: 10px; }
+    .author-info .skill li {
+      list-style: none; }
+      .author-info .skill li:hover {
+        text-decoration: line-through; }
+  .author-info .project {
+    margin: auto;
+    display: flex;
+    flex-direction: column; }
+    .author-info .project a {
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: bold; }
+      .author-info .project a:hover {
+        color: #2ecc71;
+        font-style: italic;
+        transition: all 0.5s ease-out; }
+    .author-info .project .project-img {
+      border-radius: 10px; }
+      .author-info .project .project-img:hover {
+        transform: scale(1.05);
+        transition: all 0.5s ease-out; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 2rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 60vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 40vh;
+    transform: translate3d(100%, 0, 0); }
+  profile h1 {
+    margin-bottom: 1em; }
+  .author-info {
+    grid-template-areas: 'bio-image' 'bio' 'skill' 'project-1' 'project-2' 'project-3';
+    grid-template-columns: 1fr; }
+    .author-info .bio {
+      margin: auto; }
+      .author-info .bio h4 {
+        text-align: center; }
+      .author-info .bio .bio-content {
+        display: flex;
+        flex-direction: column; }
+        .author-info .bio .bio-content li {
+          text-align: center; }
+    .author-info .skill {
+      margin: auto; }
+      .author-info .skill h4 {
+        text-align: center; }
+      .author-info .skill li {
+        text-align: center; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
