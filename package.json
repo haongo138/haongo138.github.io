@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Responsive Portfolio Webside",
   "main": "index.js",
+  "homepage": "https://haongo138.github.io/scss_demo_portfolio",
   "scripts": {
     "sass": "node-sass --watch scss/ --output dist/css/ --recursive",
-    "test": "live-server /mnt/d/demo_portfolio/dist"
+    "test": "live-server /mnt/d/demo_portfolio/dist",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Hao Ngo",
